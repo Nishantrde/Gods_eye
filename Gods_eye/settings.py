@@ -125,7 +125,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'staticfiles')
 
 # Additional directories to search for static files
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Project-level static files
+    
     os.path.join(BASE_DIR, 'node_modules'),  # npm-managed libraries
     os.path.join(BASE_DIR, 'mainapp/static'),  # App-level static files
 ]
