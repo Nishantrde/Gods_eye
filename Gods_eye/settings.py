@@ -127,8 +127,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # Project-level static files
     os.path.join(BASE_DIR, 'node_modules'),  # npm-managed libraries
+    os.path.join(BASE_DIR, 'mainapp/static'),  # App-level static files
 ]
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
