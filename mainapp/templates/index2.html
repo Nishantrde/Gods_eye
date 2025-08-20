@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D3 Fullscreen World Map with Tooltip + Zoom/Pan</title>
+  <style>
+    /* Make body and html take full space */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden; /* prevent scrollbars */
+      font-family: "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    /* SVG takes entire screen */
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #eef2f3; /* light background for contrast */
+    }
+
+    /* Default country style */
+    .map path {
+      fill: #aaa;
+      stroke: #fff;
+      cursor: pointer; /* indicates hoverable */
+    }
+
+    /* Tooltip style */
+    #tooltip {
+      position: absolute;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      pointer-events: none; /* allow mouse to pass through */
+      opacity: 0; /* hidden by default */
+      transition: opacity 0.2s ease; /* smooth fade */
+    }
+  </style>
+</head>
+<body>
+  <!-- Tooltip container -->
+  <div id="tooltip"></div>
+
+  <!-- Main SVG for map -->
+  <svg id="map-chart">
+    <g class="map"></g> <!-- Group for countries -->
+  </svg>
+
+  <!-- Load D3 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    // Grab reference to SVG and <g> where map will be drawn
+    const svg = d3.select("#map-chart");
+    const g = svg.select("g.map");
+
+    // Get screen size
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+
+    // Define projection (how lat/long is mapped to screen coords)
+    let projection = d3.geoNaturalEarth1()
+      .scale(width / 6)             // adjust scale based on width
+      .translate([width / 2, height / 2]); // center map
+
+    // Create geo path generator with projection
+    let geoGenerator = d3.geoPath().projection(projection);
+
+    // Tooltip reference
+    const tooltip = d3.select("#tooltip");
+
+    // Add zoom + pan functionality
+    const zoom = d3.zoom()
+      .scaleExtent([1.5, 8]) // min & max zoom levels
+      .on("zoom", (event) => {
+        g.attr("transform", event.transform); // apply pan/zoom transform
+      });
+
+    // Apply zoom behavior to SVG
+    svg.call(zoom);
+    
+    // Function to render/update map
+    function update(geojson) {
+      g.selectAll("path")
+        .data(geojson.features)
+        .join("path")
+        .attr("d", geoGenerator) // draw each country
+        // Mouse events for tooltip
+        .on("mouseover", function(event, d) {
+          d3.select(this).attr("fill", "orange"); // highlight hovered country
+          tooltip
+            .style("opacity", 1)                  // show tooltip
+            .html(`<strong>${d.properties.name}</strong><br><img src="https://img.youtube.com/vi/4fcX8cnQq7o/sddefault.jpg" width="120" height="90"></img>`); // country name
+        })
+        .on("mousemove", function(event) {
+          tooltip
+            .style("left", (event.pageX + 10) + "px") // move tooltip with mouse
+            .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", function() {
+          d3.select(this).attr("fill", "#aaa");   // reset color
+          tooltip.style("opacity", 0);            // hide tooltip
+        });
+    }
+
+    // Load world map GeoJSON data
+    d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
+      .then(function(json) {
+        update(json); // draw map
+        console.log(json.features)
+      });
+
+    // Make map responsive on window resize
+    window.addEventListener("resize", () => {
+      // Update new screen size
+      width = window.innerWidth;
+      height = window.innerHeight;
+
+      // Update projection
+      projection
+        .scale(width / 6)
+        .translate([width / 2, height / 2]);
+
+      // Redraw countries with new projection
+      g.selectAll("path").attr("d", geoGenerator);
+    });
+  </script> 
+</body>
+</html>
