@@ -1,0 +1,680 @@
+{
+    "Albania": {
+        "country": "Albania",
+        "title": "Noizy x Yll Limani - Netet e vona (Official Video)",
+        "youtube_url": "https://www.youtube.com/watch?v=rvpVLfVUaI0",
+        "thumbnail_url": "https://i.ytimg.com/vi/rvpVLfVUaI0/hqdefault.jpg"
+    },
+    "Algeria": {
+        "country": "Algeria",
+        "title": "Mohamed Khassani - Haka Ydirou Rejal (Reprise Cheb Azzedine)",
+        "youtube_url": "https://www.youtube.com/watch?v=pNtwr7OOazM",
+        "thumbnail_url": "https://i.ytimg.com/vi/pNtwr7OOazM/hqdefault.jpg"
+    },
+    "Argentina": {
+        "country": "Argentina",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Armenia": {
+        "country": "Armenia",
+        "title": "Tatev Asatryan - Sirts Vonts e Dimanalu // Տաթև Ասատրյան - Սիրտս Ոնց է Դիմանալու",
+        "youtube_url": "https://www.youtube.com/watch?v=c-_FmZXE1S0",
+        "thumbnail_url": "https://i.ytimg.com/vi/c-_FmZXE1S0/hqdefault.jpg"
+    },
+    "Australia": {
+        "country": "Australia",
+        "title": "Tattoo",
+        "youtube_url": "https://www.youtube.com/watch?v=oIucYqrz35Q",
+        "thumbnail_url": "https://i.ytimg.com/vi/oIucYqrz35Q/hqdefault.jpg"
+    },
+    "Austria": {
+        "country": "Austria",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Azerbaijan": {
+        "country": "Azerbaijan",
+        "title": "Ferid Ehmedzade & Vefa Serifova - Neyimi Beyenmedin  |2025| Klip",
+        "youtube_url": "https://www.youtube.com/watch?v=lNW7_we34kQ",
+        "thumbnail_url": "https://i.ytimg.com/vi/lNW7_we34kQ/hqdefault.jpg"
+    },
+    "Bahrain": {
+        "country": "Bahrain",
+        "title": "Love Insurance Kompany (LIK - Tamil) | First Punch | Pradeep Ranganathan | Vignesh Shivan | Anirudh",
+        "youtube_url": "https://www.youtube.com/watch?v=TnupaGUj1R8",
+        "thumbnail_url": "https://i.ytimg.com/vi/TnupaGUj1R8/hqdefault.jpg"
+    },
+    "Bangladesh": {
+        "country": "Bangladesh",
+        "title": "Janaab-e-Aali | Full Song | WAR 2 | Hrithik Roshan, NTR | Pritam, Sachet Tandon, Saaj Bhatt, Amitabh",
+        "youtube_url": "https://www.youtube.com/watch?v=9l5QY7BJmHQ",
+        "thumbnail_url": "https://i.ytimg.com/vi/9l5QY7BJmHQ/hqdefault.jpg"
+    },
+    "Belarus": {
+        "country": "Belarus",
+        "title": "Stray Kids \"CEREMONY\" M/V",
+        "youtube_url": "https://www.youtube.com/watch?v=P7vBoGWoReg",
+        "thumbnail_url": "https://i.ytimg.com/vi/P7vBoGWoReg/hqdefault.jpg"
+    },
+    "Belgium": {
+        "country": "Belgium",
+        "title": "Pommelien Thijs - Ben je klaar? (Official Video)",
+        "youtube_url": "https://www.youtube.com/watch?v=oZM8Y3dBNTM",
+        "thumbnail_url": "https://i.ytimg.com/vi/oZM8Y3dBNTM/hqdefault.jpg"
+    },
+    "Bolivia": {
+        "country": "Bolivia",
+        "title": "Don Omar - Danza Kuduro (Letra/Lyrics) ft. Lucenzo",
+        "youtube_url": "https://www.youtube.com/watch?v=ZESyq7kvjeE",
+        "thumbnail_url": "https://i.ytimg.com/vi/ZESyq7kvjeE/hqdefault.jpg"
+    },
+    "Bosnia and Herzegovina": {
+        "country": "Bosnia and Herzegovina",
+        "title": "Amar Gile - UJDURMA (Official Music Video) 2025",
+        "youtube_url": "https://www.youtube.com/watch?v=YAGVRrdhlsk",
+        "thumbnail_url": "https://i.ytimg.com/vi/YAGVRrdhlsk/hqdefault.jpg"
+    },
+    "Brazil": {
+        "country": "Brazil",
+        "title": "Urias, Criolo - DEUS (Visualizer)",
+        "youtube_url": "https://www.youtube.com/watch?v=jpB-IeJuEm0",
+        "thumbnail_url": "https://i.ytimg.com/vi/jpB-IeJuEm0/hqdefault.jpg"
+    },
+    "Bulgaria": {
+        "country": "Bulgaria",
+        "title": "Меди - Жена мечта | Medi - Jena mechta ",
+        "youtube_url": "https://www.youtube.com/watch?v=8cqaq4U8KYM",
+        "thumbnail_url": "https://i.ytimg.com/vi/8cqaq4U8KYM/hqdefault.jpg"
+    },
+    "Cambodia": {
+        "country": "Cambodia",
+        "title": "NORITH - CIGARETTES AFTER WAR FT. VANNDA (OFFICIAL VISUALIZER)",
+        "youtube_url": "https://www.youtube.com/watch?v=PwZM8XX2l18",
+        "thumbnail_url": "https://i.ytimg.com/vi/PwZM8XX2l18/hqdefault.jpg"
+    },
+    "Canada": {
+        "country": "Canada",
+        "title": "Aphrodite",
+        "youtube_url": "https://www.youtube.com/watch?v=maS-xgLnWIc",
+        "thumbnail_url": "https://i.ytimg.com/vi/maS-xgLnWIc/hqdefault.jpg"
+    },
+    "Chile": {
+        "country": "Chile",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Colombia": {
+        "country": "Colombia",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Costa Rica": {
+        "country": "Costa Rica",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Croatia": {
+        "country": "Croatia",
+        "title": "M.P. Thompson - Ravnoteža (Hipodrom, Zagreb 2025.)",
+        "youtube_url": "https://www.youtube.com/watch?v=DRkjEnnIaBw",
+        "thumbnail_url": "https://i.ytimg.com/vi/DRkjEnnIaBw/hqdefault.jpg"
+    },
+    "Cyprus": {
+        "country": "Cyprus",
+        "title": "MERO x ATI242 - UYKUSUZ GECELER [Official Video]",
+        "youtube_url": "https://www.youtube.com/watch?v=MNqYXRyra7E",
+        "thumbnail_url": "https://i.ytimg.com/vi/MNqYXRyra7E/hqdefault.jpg"
+    },
+    "Czechia": {
+        "country": "Czechia",
+        "title": "Stray Kids \"CEREMONY\" M/V",
+        "youtube_url": "https://www.youtube.com/watch?v=P7vBoGWoReg",
+        "thumbnail_url": "https://i.ytimg.com/vi/P7vBoGWoReg/hqdefault.jpg"
+    },
+    "Denmark": {
+        "country": "Denmark",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Dominican Republic": {
+        "country": "Dominican Republic",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Ecuador": {
+        "country": "Ecuador",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Egypt": {
+        "country": "Egypt",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "El Salvador": {
+        "country": "El Salvador",
+        "title": "YOGURCITO REMIX (feat. Kris R., ROA)",
+        "youtube_url": "https://www.youtube.com/watch?v=wpUlKBSEM20",
+        "thumbnail_url": "https://i.ytimg.com/vi/wpUlKBSEM20/hqdefault.jpg"
+    },
+    "Estonia": {
+        "country": "Estonia",
+        "title": "Stray Kids \"CEREMONY\" M/V",
+        "youtube_url": "https://www.youtube.com/watch?v=P7vBoGWoReg",
+        "thumbnail_url": "https://i.ytimg.com/vi/P7vBoGWoReg/hqdefault.jpg"
+    },
+    "Finland": {
+        "country": "Finland",
+        "title": "AHTI x Behm - Tähdet (Virallinen musiikkivideo)",
+        "youtube_url": "https://www.youtube.com/watch?v=lA9ARVRuSlM",
+        "thumbnail_url": "https://i.ytimg.com/vi/lA9ARVRuSlM/hqdefault.jpg"
+    },
+    "France": {
+        "country": "France",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Georgia": {
+        "country": "Georgia",
+        "title": "სევდიანი მოლოდინი (Special Version)",
+        "youtube_url": "https://www.youtube.com/watch?v=xLsm9wGQzKE",
+        "thumbnail_url": "https://i.ytimg.com/vi/xLsm9wGQzKE/hqdefault.jpg"
+    },
+    "Germany": {
+        "country": "Germany",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Ghana": {
+        "country": "Ghana",
+        "title": "Kofi Kinaata - It Is Finished (Prod. By OTWoode)",
+        "youtube_url": "https://www.youtube.com/watch?v=WIuxhPPlxHg",
+        "thumbnail_url": "https://i.ytimg.com/vi/WIuxhPPlxHg/hqdefault.jpg"
+    },
+    "Greece": {
+        "country": "Greece",
+        "title": "Stray Kids \"CEREMONY\" M/V",
+        "youtube_url": "https://www.youtube.com/watch?v=P7vBoGWoReg",
+        "thumbnail_url": "https://i.ytimg.com/vi/P7vBoGWoReg/hqdefault.jpg"
+    },
+    "Guatemala": {
+        "country": "Guatemala",
+        "title": "Don Omar - Danza Kuduro (Letra/Lyrics) ft. Lucenzo",
+        "youtube_url": "https://www.youtube.com/watch?v=ZESyq7kvjeE",
+        "thumbnail_url": "https://i.ytimg.com/vi/ZESyq7kvjeE/hqdefault.jpg"
+    },
+    "Honduras": {
+        "country": "Honduras",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Hong Kong": {
+        "country": "Hong Kong",
+        "title": "IVE 아이브 ‘XOXZ’ MV",
+        "youtube_url": "https://www.youtube.com/watch?v=B1ShLiq3EVc",
+        "thumbnail_url": "https://i.ytimg.com/vi/B1ShLiq3EVc/hqdefault.jpg"
+    },
+    "Hungary": {
+        "country": "Hungary",
+        "title": "LL JUNIOR - FREY TIMI (OFFICIAL LYRICS VIDEO)",
+        "youtube_url": "https://www.youtube.com/watch?v=tG0e72Dx1n4",
+        "thumbnail_url": "https://i.ytimg.com/vi/tG0e72Dx1n4/hqdefault.jpg"
+    },
+    "Iceland": {
+        "country": "Iceland",
+        "title": "Justin Bieber - FIRST PLACE",
+        "youtube_url": "https://www.youtube.com/watch?v=EGKfSUDAiFg",
+        "thumbnail_url": "https://i.ytimg.com/vi/EGKfSUDAiFg/hqdefault.jpg"
+    },
+    "India": {
+        "country": "India",
+        "title": "Morya Re - Full Album | Ganpati Songs | Ganesh Chaturthi Special Marathi Songs | Bappa Morya",
+        "youtube_url": "https://www.youtube.com/watch?v=kYQBwC744UQ",
+        "thumbnail_url": "https://i.ytimg.com/vi/kYQBwC744UQ/hqdefault.jpg"
+    },
+    "Indonesia": {
+        "country": "Indonesia",
+        "title": "DJ CEK SOUND FULL BASS TERBARU 2025 PALING HOREGG",
+        "youtube_url": "https://www.youtube.com/watch?v=1gqQO2Mhw5A",
+        "thumbnail_url": "https://i.ytimg.com/vi/1gqQO2Mhw5A/hqdefault.jpg"
+    },
+    "Iraq": {
+        "country": "Iraq",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Ireland": {
+        "country": "Ireland",
+        "title": "Stray Kids \"CEREMONY\" M/V",
+        "youtube_url": "https://www.youtube.com/watch?v=P7vBoGWoReg",
+        "thumbnail_url": "https://i.ytimg.com/vi/P7vBoGWoReg/hqdefault.jpg"
+    },
+    "Israel": {
+        "country": "Israel",
+        "title": "אייל גולן ועדן בן זקן – אל תחזרי (Prod. by Moshe & Ofek)",
+        "youtube_url": "https://www.youtube.com/watch?v=asA9X6iEHdg",
+        "thumbnail_url": "https://i.ytimg.com/vi/asA9X6iEHdg/hqdefault.jpg"
+    },
+    "Italy": {
+        "country": "Italy",
+        "title": "RONDO X WELCOME TO MYLAN",
+        "youtube_url": "https://www.youtube.com/watch?v=yWYMlDheCow",
+        "thumbnail_url": "https://i.ytimg.com/vi/yWYMlDheCow/hqdefault.jpg"
+    },
+    "Jamaica": {
+        "country": "Jamaica",
+        "title": "Chronic Law - Malie Tricks (Official Audio Video)",
+        "youtube_url": "https://www.youtube.com/watch?v=6OBzmcS_RC0",
+        "thumbnail_url": "https://i.ytimg.com/vi/6OBzmcS_RC0/hqdefault.jpg"
+    },
+    "Japan": {
+        "country": "Japan",
+        "title": "BE:FIRST / Secret Garden -Music Video-",
+        "youtube_url": "https://www.youtube.com/watch?v=SfGFxf2J_sU",
+        "thumbnail_url": "https://i.ytimg.com/vi/SfGFxf2J_sU/hqdefault.jpg"
+    },
+    "Jordan": {
+        "country": "Jordan",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Kazakhstan": {
+        "country": "Kazakhstan",
+        "title": "Sadraddin - Ұмытылмас күн | LIVE",
+        "youtube_url": "https://www.youtube.com/watch?v=318nlL8v1XE",
+        "thumbnail_url": "https://i.ytimg.com/vi/318nlL8v1XE/hqdefault.jpg"
+    },
+    "Kenya": {
+        "country": "Kenya",
+        "title": "Toxic Lyrikali - BUD FLOWERS (Official Video)",
+        "youtube_url": "https://www.youtube.com/watch?v=rLV5UyD5Ah0",
+        "thumbnail_url": "https://i.ytimg.com/vi/rLV5UyD5Ah0/hqdefault.jpg"
+    },
+    "Korea (Republic of)": {
+        "country": "Korea (Republic of)",
+        "title": "IVE 아이브 ‘XOXZ’ MV",
+        "youtube_url": "https://www.youtube.com/watch?v=B1ShLiq3EVc",
+        "thumbnail_url": "https://i.ytimg.com/vi/B1ShLiq3EVc/hqdefault.jpg"
+    },
+    "Kuwait": {
+        "country": "Kuwait",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Lao People's Democratic Republic": {
+        "country": "Lao People's Democratic Republic",
+        "title": "ปลายฟ้า - ใหม่พัชรี MAI PHATCHAREE ",
+        "youtube_url": "https://www.youtube.com/watch?v=78JaZH8xx0c",
+        "thumbnail_url": "https://i.ytimg.com/vi/78JaZH8xx0c/hqdefault.jpg"
+    },
+    "Latvia": {
+        "country": "Latvia",
+        "title": "Stray Kids \"CEREMONY\" M/V",
+        "youtube_url": "https://www.youtube.com/watch?v=P7vBoGWoReg",
+        "thumbnail_url": "https://i.ytimg.com/vi/P7vBoGWoReg/hqdefault.jpg"
+    },
+    "Lebanon": {
+        "country": "Lebanon",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Libya": {
+        "country": "Libya",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Liechtenstein": {
+        "country": "Liechtenstein",
+        "title": "Ernim Ibrahimi Ft. Hanan Ahmed - BABA (Official Video 4K)",
+        "youtube_url": "https://www.youtube.com/watch?v=TOMsPsVmopM",
+        "thumbnail_url": "https://i.ytimg.com/vi/TOMsPsVmopM/hqdefault.jpg"
+    },
+    "Lithuania": {
+        "country": "Lithuania",
+        "title": "Jessica Shy – Laikas Negydo (Live @ Kalnų parkas)",
+        "youtube_url": "https://www.youtube.com/watch?v=QGSwJqygp1Q",
+        "thumbnail_url": "https://i.ytimg.com/vi/QGSwJqygp1Q/hqdefault.jpg"
+    },
+    "Luxembourg": {
+        "country": "Luxembourg",
+        "title": "Buguin Martins - Nu ta konbina ft Tony Fika",
+        "youtube_url": "https://www.youtube.com/watch?v=jlK27Dbt4wo",
+        "thumbnail_url": "https://i.ytimg.com/vi/jlK27Dbt4wo/hqdefault.jpg"
+    },
+    "Malaysia": {
+        "country": "Malaysia",
+        "title": "Stray Kids \"CEREMONY\" M/V",
+        "youtube_url": "https://www.youtube.com/watch?v=P7vBoGWoReg",
+        "thumbnail_url": "https://i.ytimg.com/vi/P7vBoGWoReg/hqdefault.jpg"
+    },
+    "Malta": {
+        "country": "Malta",
+        "title": "ST MAN FT. YUNG 22 & BIG NORZZA - BOMBAY | OFFICIAL MUSIC VIDEO | 2025",
+        "youtube_url": "https://www.youtube.com/watch?v=P7BusKTXzP0",
+        "thumbnail_url": "https://i.ytimg.com/vi/P7BusKTXzP0/hqdefault.jpg"
+    },
+    "Mexico": {
+        "country": "Mexico",
+        "title": "Don Omar - Danza Kuduro (Letra/Lyrics) ft. Lucenzo",
+        "youtube_url": "https://www.youtube.com/watch?v=ZESyq7kvjeE",
+        "thumbnail_url": "https://i.ytimg.com/vi/ZESyq7kvjeE/hqdefault.jpg"
+    },
+    "Moldova": {
+        "country": "Moldova",
+        "title": "Karmelita D - Banii nu-ti aduc iubirea",
+        "youtube_url": "https://www.youtube.com/watch?v=Fs_ku1s6f44",
+        "thumbnail_url": "https://i.ytimg.com/vi/Fs_ku1s6f44/hqdefault.jpg"
+    },
+    "Mongolia": {
+        "country": "Mongolia",
+        "title": "T.Ariunaa - Чамтай бас чамгүй ft Morningstar (Official Video) Chamtai Bas Chamgui",
+        "youtube_url": "https://www.youtube.com/watch?v=0o60Hdraj0U",
+        "thumbnail_url": "https://i.ytimg.com/vi/0o60Hdraj0U/hqdefault.jpg"
+    },
+    "Montenegro": {
+        "country": "Montenegro",
+        "title": "Mr. Loba Loba",
+        "youtube_url": "https://www.youtube.com/watch?v=mm3rhpAj2gs",
+        "thumbnail_url": "https://i.ytimg.com/vi/mm3rhpAj2gs/hqdefault.jpg"
+    },
+    "Morocco": {
+        "country": "Morocco",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Nepal": {
+        "country": "Nepal",
+        "title": "ST MAN FT. YUNG 22 & BIG NORZZA - BOMBAY | OFFICIAL MUSIC VIDEO | 2025",
+        "youtube_url": "https://www.youtube.com/watch?v=P7BusKTXzP0",
+        "thumbnail_url": "https://i.ytimg.com/vi/P7BusKTXzP0/hqdefault.jpg"
+    },
+    "Netherlands": {
+        "country": "Netherlands",
+        "title": "Stray Kids \"CEREMONY\" M/V",
+        "youtube_url": "https://www.youtube.com/watch?v=P7vBoGWoReg",
+        "thumbnail_url": "https://i.ytimg.com/vi/P7vBoGWoReg/hqdefault.jpg"
+    },
+    "New Zealand": {
+        "country": "New Zealand",
+        "title": "For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025",
+        "youtube_url": "https://www.youtube.com/watch?v=-YlmnPh-6rE",
+        "thumbnail_url": "https://i.ytimg.com/vi/-YlmnPh-6rE/hqdefault.jpg"
+    },
+    "Nicaragua": {
+        "country": "Nicaragua",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Nigeria": {
+        "country": "Nigeria",
+        "title": "Olamide - Billionaires Club (Official Video) ft. Wizkid, Darkoo",
+        "youtube_url": "https://www.youtube.com/watch?v=Uc8MCfbjcnE",
+        "thumbnail_url": "https://i.ytimg.com/vi/Uc8MCfbjcnE/hqdefault.jpg"
+    },
+    "North Macedonia": {
+        "country": "North Macedonia",
+        "title": "Pajak - Marija (Official Video)",
+        "youtube_url": "https://www.youtube.com/watch?v=5-rgEglpl5I",
+        "thumbnail_url": "https://i.ytimg.com/vi/5-rgEglpl5I/hqdefault.jpg"
+    },
+    "Norway": {
+        "country": "Norway",
+        "title": "Stray Kids \"CEREMONY\" M/V",
+        "youtube_url": "https://www.youtube.com/watch?v=P7vBoGWoReg",
+        "thumbnail_url": "https://i.ytimg.com/vi/P7vBoGWoReg/hqdefault.jpg"
+    },
+    "Oman": {
+        "country": "Oman",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Pakistan": {
+        "country": "Pakistan",
+        "title": "For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025",
+        "youtube_url": "https://www.youtube.com/watch?v=-YlmnPh-6rE",
+        "thumbnail_url": "https://i.ytimg.com/vi/-YlmnPh-6rE/hqdefault.jpg"
+    },
+    "Panama": {
+        "country": "Panama",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Papua New Guinea": {
+        "country": "Papua New Guinea",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Paraguay": {
+        "country": "Paraguay",
+        "title": "Don Omar - Danza Kuduro (Letra/Lyrics) ft. Lucenzo",
+        "youtube_url": "https://www.youtube.com/watch?v=ZESyq7kvjeE",
+        "thumbnail_url": "https://i.ytimg.com/vi/ZESyq7kvjeE/hqdefault.jpg"
+    },
+    "Peru": {
+        "country": "Peru",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Philippines": {
+        "country": "Philippines",
+        "title": "Flow G - GOTCHU (Official Music Video)",
+        "youtube_url": "https://www.youtube.com/watch?v=LzuoKSzOIEQ",
+        "thumbnail_url": "https://i.ytimg.com/vi/LzuoKSzOIEQ/hqdefault.jpg"
+    },
+    "Poland": {
+        "country": "Poland",
+        "title": "Fausti & DZIARMA - NA PARTY (prod. Mercury)",
+        "youtube_url": "https://www.youtube.com/watch?v=5kl8sOzsrEo",
+        "thumbnail_url": "https://i.ytimg.com/vi/5kl8sOzsrEo/hqdefault.jpg"
+    },
+    "Portugal": {
+        "country": "Portugal",
+        "title": "MC Petite Abelha - Falsa tuga (IA)",
+        "youtube_url": "https://www.youtube.com/watch?v=F74XqLi4Kns",
+        "thumbnail_url": "https://i.ytimg.com/vi/F74XqLi4Kns/hqdefault.jpg"
+    },
+    "Puerto Rico": {
+        "country": "Puerto Rico",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Qatar": {
+        "country": "Qatar",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Romania": {
+        "country": "Romania",
+        "title": "Ursaru - Ponte Pa Mi | Official Video",
+        "youtube_url": "https://www.youtube.com/watch?v=uBiOqjERQzM",
+        "thumbnail_url": "https://i.ytimg.com/vi/uBiOqjERQzM/hqdefault.jpg"
+    },
+    "Russia": {
+        "country": "Russia",
+        "title": "JamBeats - Forever With You (Original Mix)",
+        "youtube_url": "https://www.youtube.com/watch?v=8EB2w0h73RI",
+        "thumbnail_url": "https://i.ytimg.com/vi/8EB2w0h73RI/hqdefault.jpg"
+    },
+    "Saudi Arabia": {
+        "country": "Saudi Arabia",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Senegal": {
+        "country": "Senegal",
+        "title": "Wally B. Seck - Mon combat (clip officiel)",
+        "youtube_url": "https://www.youtube.com/watch?v=RHlTJ58USzg",
+        "thumbnail_url": "https://i.ytimg.com/vi/RHlTJ58USzg/hqdefault.jpg"
+    },
+    "Serbia": {
+        "country": "Serbia",
+        "title": "TNG - U Zoni",
+        "youtube_url": "https://www.youtube.com/watch?v=Cm_u7AVYvDE",
+        "thumbnail_url": "https://i.ytimg.com/vi/Cm_u7AVYvDE/hqdefault.jpg"
+    },
+    "Singapore": {
+        "country": "Singapore",
+        "title": "IVE 아이브 ‘XOXZ’ MV",
+        "youtube_url": "https://www.youtube.com/watch?v=B1ShLiq3EVc",
+        "thumbnail_url": "https://i.ytimg.com/vi/B1ShLiq3EVc/hqdefault.jpg"
+    },
+    "Slovakia": {
+        "country": "Slovakia",
+        "title": "P.A.T x Dyzivv - DOBRÝ TRACK (Official video)",
+        "youtube_url": "https://www.youtube.com/watch?v=GjKvJBYsQ4c",
+        "thumbnail_url": "https://i.ytimg.com/vi/GjKvJBYsQ4c/hqdefault.jpg"
+    },
+    "Slovenia": {
+        "country": "Slovenia",
+        "title": "LUKA BASI - KONOBA (Official Video)",
+        "youtube_url": "https://www.youtube.com/watch?v=EI2q9JTp6z8",
+        "thumbnail_url": "https://i.ytimg.com/vi/EI2q9JTp6z8/hqdefault.jpg"
+    },
+    "South Africa": {
+        "country": "South Africa",
+        "title": "Zee Nxumalo, Skillz & Sykes - Mamma (Official Music Video)",
+        "youtube_url": "https://www.youtube.com/watch?v=AIA94dAxkiY",
+        "thumbnail_url": "https://i.ytimg.com/vi/AIA94dAxkiY/hqdefault.jpg"
+    },
+    "Spain": {
+        "country": "Spain",
+        "title": "YOGURCITO REMIX (feat. Kris R., ROA)",
+        "youtube_url": "https://www.youtube.com/watch?v=wpUlKBSEM20",
+        "thumbnail_url": "https://i.ytimg.com/vi/wpUlKBSEM20/hqdefault.jpg"
+    },
+    "Sri Lanka": {
+        "country": "Sri Lanka",
+        "title": "Sithi j Ft Lil Rome Praba - Bashawa (භාශාව) Official Music Video",
+        "youtube_url": "https://www.youtube.com/watch?v=4UByspjPUBo",
+        "thumbnail_url": "https://i.ytimg.com/vi/4UByspjPUBo/hqdefault.jpg"
+    },
+    "Sweden": {
+        "country": "Sweden",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Switzerland": {
+        "country": "Switzerland",
+        "title": "Ernim Ibrahimi Ft. Hanan Ahmed - BABA (Official Video 4K)",
+        "youtube_url": "https://www.youtube.com/watch?v=TOMsPsVmopM",
+        "thumbnail_url": "https://i.ytimg.com/vi/TOMsPsVmopM/hqdefault.jpg"
+    },
+    "Taiwan": {
+        "country": "Taiwan",
+        "title": "IVE 아이브 ‘XOXZ’ MV",
+        "youtube_url": "https://www.youtube.com/watch?v=B1ShLiq3EVc",
+        "thumbnail_url": "https://i.ytimg.com/vi/B1ShLiq3EVc/hqdefault.jpg"
+    },
+    "Tanzania": {
+        "country": "Tanzania",
+        "title": "Marioo - Dunia (Clip Officiel)",
+        "youtube_url": "https://www.youtube.com/watch?v=ddk_25wr1pc",
+        "thumbnail_url": "https://i.ytimg.com/vi/ddk_25wr1pc/hqdefault.jpg"
+    },
+    "Thailand": {
+        "country": "Thailand",
+        "title": "IVE 아이브 ‘XOXZ’ MV",
+        "youtube_url": "https://www.youtube.com/watch?v=B1ShLiq3EVc",
+        "thumbnail_url": "https://i.ytimg.com/vi/B1ShLiq3EVc/hqdefault.jpg"
+    },
+    "Tunisia": {
+        "country": "Tunisia",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Turkey": {
+        "country": "Turkey",
+        "title": "MERO x ATI242 - UYKUSUZ GECELER [Official Video]",
+        "youtube_url": "https://www.youtube.com/watch?v=MNqYXRyra7E",
+        "thumbnail_url": "https://i.ytimg.com/vi/MNqYXRyra7E/hqdefault.jpg"
+    },
+    "Uganda": {
+        "country": "Uganda",
+        "title": "Omega 256 X Cindy Sanyu - See You Tonight (Official Video)",
+        "youtube_url": "https://www.youtube.com/watch?v=M8vcWjlN6OQ",
+        "thumbnail_url": "https://i.ytimg.com/vi/M8vcWjlN6OQ/hqdefault.jpg"
+    },
+    "Ukraine": {
+        "country": "Ukraine",
+        "title": "DREVO - ГЕНГСТА",
+        "youtube_url": "https://www.youtube.com/watch?v=ES057A0yRjM",
+        "thumbnail_url": "https://i.ytimg.com/vi/ES057A0yRjM/hqdefault.jpg"
+    },
+    "United Arab Emirates": {
+        "country": "United Arab Emirates",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "United Kingdom": {
+        "country": "United Kingdom",
+        "title": "Eminem - Everybody’s Looking At Me [Official Audio]",
+        "youtube_url": "https://www.youtube.com/watch?v=IKU-yswi8HU",
+        "thumbnail_url": "https://i.ytimg.com/vi/IKU-yswi8HU/hqdefault.jpg"
+    },
+    "United States": {
+        "country": "United States",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Uruguay": {
+        "country": "Uruguay",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Venezuela": {
+        "country": "Venezuela",
+        "title": "💕🧃 YOGURCITO REMIX | BLESSD ❌ ANUEL AA ❌ YAN BLOCK ❌ LUAR LA L ❌ ROA  ❌ KRIS R",
+        "youtube_url": "https://www.youtube.com/watch?v=B7P8NMCAby8",
+        "thumbnail_url": "https://i.ytimg.com/vi/B7P8NMCAby8/hqdefault.jpg"
+    },
+    "Vietnam": {
+        "country": "Vietnam",
+        "title": "NỖI ĐAU GIỮA HÒA BÌNH - HÒA MINZY x NGUYỄN VĂN CHUNG | OFFICIAL MUSIC VIDEO",
+        "youtube_url": "https://www.youtube.com/watch?v=yHikkFeIHNA",
+        "thumbnail_url": "https://i.ytimg.com/vi/yHikkFeIHNA/hqdefault.jpg"
+    },
+    "Yemen": {
+        "country": "Yemen",
+        "title": "Fadel Chaker - Sahak Isho2  | 2025 | فضل شاكر - صحاك الشوق",
+        "youtube_url": "https://www.youtube.com/watch?v=pDy8B_r81vY",
+        "thumbnail_url": "https://i.ytimg.com/vi/pDy8B_r81vY/hqdefault.jpg"
+    },
+    "Zimbabwe": {
+        "country": "Zimbabwe",
+        "title": "Chillmaster - Dai Mandiropafadza ",
+        "youtube_url": "https://www.youtube.com/watch?v=f8msDrkBgww",
+        "thumbnail_url": "https://i.ytimg.com/vi/f8msDrkBgww/hqdefault.jpg"
+    }
+}

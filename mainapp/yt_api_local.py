@@ -234,7 +234,7 @@ def fetch_top_trending_video(api_key, region_code):
 
 
 def main():
-    trending_videos = []
+    trending_videos = {}
 
     for code, country_name in COUNTRIES.items():
         print(f"Fetching top trending video for {country_name} ({code})...")
@@ -247,7 +247,7 @@ def main():
                 "youtube_url": f"https://www.youtube.com/watch?v={video['id']}",
                 "thumbnail_url": video["snippet"]["thumbnails"]["high"]["url"],
             }
-            trending_videos.append(video_info)
+            trending_videos[country_name]=video_info
 
     # Save results to a JSON file
     with open("top_trending_videos.json", "w", encoding="utf-8") as file:

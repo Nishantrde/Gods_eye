@@ -1,136 +1,372 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D3 Fullscreen World Map with Tooltip + Zoom/Pan</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive World Map — Beautiful + Accessible</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    /* Make body and html take full space */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      overflow: hidden; /* prevent scrollbars */
-      font-family: "Helvetica Neue", Helvetica, sans-serif;
+    :root{
+      --bg-1: #0f1724;
+      --bg-2: #082032;
+      --card: rgba(255,255,255,0.06);
+      --glass: rgba(255,255,255,0.03);
+      --accent: #60a5fa;
+      --accent-2: #7c3aed;
+      --muted: rgba(255,255,255,0.65);
     }
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;}
+    body{background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:var(--muted);overflow:hidden}
+    .app{display:grid;grid-template-columns:320px 1fr;grid-template-rows:auto 1fr;height:100vh;gap:18px;padding:18px;box-sizing:border-box}
+    header{grid-column:1/3;display:flex;align-items:center;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    h1{font-size:16px;margin:0;color:white}
+    p.lead{margin:0;font-size:12px;color:rgba(255,255,255,0.6)}
 
-    /* SVG takes entire screen */
-    svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: #eef2f3; /* light background for contrast */
-    }
+    .sidebar{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));backdrop-filter:blur(6px);border-radius:14px;padding:16px;box-shadow:0 6px 30px rgba(2,6,23,0.6);height:calc(100vh - 110px);overflow:auto}
+    .controls{display:flex;gap:8px;margin-bottom:12px}
+    .search{flex:1;display:flex}
+    .search input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted);outline:none}
+    .button{padding:10px 12px;border-radius:10px;background:var(--card);border:1px solid rgba(255,255,255,0.03);cursor:pointer;color:var(--muted)}
 
-    /* Default country style */
-    .map path {
-      fill: #aaa;
-      stroke: #fff;
-      cursor: pointer; /* indicates hoverable */
-    }
+    .info-card{margin-top:8px;padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+    .country-name{font-size:18px;color:white;font-weight:600;margin-bottom:6px}
+    .meta{font-size:13px;color:rgba(255,255,255,0.7)}
+    .thumb{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:10px}
 
-    /* Tooltip style */
-    #tooltip {
-      position: absolute;
-      z-index: 9999;
-      background: rgba(0, 0, 0, 0.75);
-      color: #fff;
-      padding: 8px 12px;
-      border-radius: 4px;
-      font-size: 14px;
-      pointer-events: none; /* allow mouse to pass through */
-      opacity: 0; /* hidden by default */
-      transition: opacity 0.2s ease; /* smooth fade */
-    }
+    #map-wrap{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 12px 40px rgba(2,6,23,0.6)}
+    svg{display:block;width:100%;height:100%;background:linear-gradient(180deg,rgba(0,0,0,0.12),rgba(255,255,255,0.02));}
+    .map path{fill:#9aa6b2;stroke:#fff;stroke-width:0.4px;cursor:pointer;transition:fill .18s ease,transform .18s ease,opacity .18s ease}
+    .map path:hover{fill:var(--accent);filter:drop-shadow(0 8px 18px rgba(96,165,250,0.12));transform:translateY(-2px)}
+    .map .highlight{fill:var(--accent-2)!important}
+
+    #tooltip{position:absolute;z-index:9999;background:linear-gradient(180deg,#0b1220ee,#061428dd);color:white;padding:12px;border-radius:10px;font-size:13px;pointer-events:none;opacity:0;transition:opacity .12s ease,transform .12s ease;box-shadow:0 10px 30px rgba(2,6,23,0.6);min-width:180px}
+    #tooltip img{width:160px;height:90px;object-fit:cover;border-radius:6px;margin-top:8px}
+
+    .zoom-controls{position:absolute;right:14px;top:14px;display:flex;flex-direction:column;gap:8px;z-index:20}
+    .zoom-controls button{width:44px;height:44px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:var(--muted);cursor:pointer}
+
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(2,6,23,0.6),rgba(2,6,23,0.85));z-index:9999}
+    .modal.show{display:flex}
+    .modal .card{width:min(900px,96%);background:linear-gradient(180deg,#071428,#071a2b);padding:18px;border-radius:12px}
+    .close{float:right;cursor:pointer}
+
+    @media (max-width:880px){.app{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:12px;padding:12px}header{grid-column:1/2}.sidebar{order:2;height:auto}.mapcol{order:1;height:60vh}}
   </style>
 </head>
 <body>
-  <!-- Tooltip container -->
-  <div id="tooltip"></div>
 
-  <!-- Main SVG for map -->
-  <svg id="map-chart">
-    <g class="map"></g> <!-- Group for countries -->
-  </svg>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <div class="logo">DM</div>
+        <div>
+          <h1>Dynamic Map — Interactive Explorer</h1>
+          <p class="lead">Hover countries, search, zoom, view media &amp; more</p>
+        </div>
+      </div>
+    </header>
 
-  <!-- Load D3 -->
+    <aside class="sidebar">
+      <div class="controls">
+        <div class="search">
+          <input id="search" placeholder="Search country (e.g. India)" aria-label="Search country" />
+        </div>
+        <button id="resetBtn" class="button" title="Reset view">Reset</button>
+      </div>
+
+      <div class="info-card" id="countryInfo">
+        <div class="country-name">Hover or select a country</div>
+        <div class="meta">Name, population, and media will appear here when available.</div>
+        <img id="countryThumb" class="thumb" src="https://via.placeholder.com/640x360?text=No+image" alt="thumbnail">
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <button id="openMedia" class="button">Open Media</button>
+          <a id="moreLink" class="button" target="_blank" rel="noopener">More</a>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.6)">
+        Tips:
+        <ul style="padding-left:18px;margin-top:6px;color:rgba(255,255,255,0.55)">
+          <li>Use mouse wheel or pinch to zoom</li>
+          <li>Click a country to open its YouTube (if provided)</li>
+          <li>Use search to find &amp; zoom to a country</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="mapcol" style="height:calc(100vh - 110px);">
+      <div id="map-wrap" style="height:100%">
+        <div id="tooltip" role="tooltip" aria-hidden="true"></div>
+        <svg id="map-chart" aria-label="World map"><g class="map"></g></svg>
+
+        <div class="zoom-controls" aria-hidden="false">
+          <button id="zoom-in" title="Zoom in">+</button>
+          <button id="zoom-out" title="Zoom out">–</button>
+          <button id="fit" title="Fit to screen">⤢</button>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  {{ data|json_script:"my-data" }}
+
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script>
-    // Grab reference to SVG and <g> where map will be drawn
-    const svg = d3.select("#map-chart");
-    const g = svg.select("g.map");
+    // -------------------------
+    // Data + name normalization
+    // -------------------------
+    const appData = JSON.parse(document.getElementById('my-data').textContent || '{}');
 
-    // Get screen size
-    let width = window.innerWidth;
-    let height = window.innerHeight;
+    // Map GeoJSON names to keys your `data` likely uses.
+    const COUNTRY_NAME_MAP = {
+      'United States of America': 'United States',
+      'United States': 'United States',
+      'USA': 'United States',
+      'England': 'United Kingdom',
+      'Great Britain': 'United Kingdom',
+      'UK': 'United Kingdom',
+      'United Kingdom of Great Britain and Northern Ireland': 'United Kingdom',
+      'Northern Ireland': 'United Kingdom',
+      'Scotland': 'United Kingdom',
+      'Wales': 'United Kingdom',
+      'Russian Federation': 'Russia',
+      'Korea, Republic of': 'South Korea',
+      "Korea, Democratic People's Republic of": 'North Korea',
+      'Viet Nam': 'Vietnam',
+      'Iran (Islamic Republic of)': 'Iran'
+      // add more mappings if you need
+    };
 
-    // Define projection (how lat/long is mapped to screen coords)
-    let projection = d3.geoNaturalEarth1()
-      .scale(width / 6)             // adjust scale based on width
-      .translate([width / 2, height / 2]); // center map
-
-    // Create geo path generator with projection
-    let geoGenerator = d3.geoPath().projection(projection);
-
-    // Tooltip reference
-    const tooltip = d3.select("#tooltip");
-
-    // Add zoom + pan functionality
-    const zoom = d3.zoom()
-      .scaleExtent([1.5, 8]) // min & max zoom levels
-      .on("zoom", (event) => {
-        g.attr("transform", event.transform); // apply pan/zoom transform
-      });
-
-    // Apply zoom behavior to SVG
-    svg.call(zoom);
-    
-    // Function to render/update map
-    function update(geojson) {
-      g.selectAll("path")
-        .data(geojson.features)
-        .join("path")
-        .attr("d", geoGenerator) // draw each country
-        // Mouse events for tooltip
-        .on("mouseover", function(event, d) {
-          d3.select(this).attr("fill", "orange"); // highlight hovered country
-          tooltip
-            .style("opacity", 1)                  // show tooltip
-            .html(`<strong>${d.properties.name}</strong><br><img src="https://img.youtube.com/vi/4fcX8cnQq7o/sddefault.jpg" width="120" height="90"></img>`); // country name
-        })
-        .on("mousemove", function(event) {
-          tooltip
-            .style("left", (event.pageX + 10) + "px") // move tooltip with mouse
-            .style("top", (event.pageY - 28) + "px");
-        })
-        .on("mouseout", function() {
-          d3.select(this).attr("fill", "#aaa");   // reset color
-          tooltip.style("opacity", 0);            // hide tooltip
-        });
+    function normalizeCountryName(name){
+      if(!name) return name;
+      if(COUNTRY_NAME_MAP[name]) return COUNTRY_NAME_MAP[name];
+      const found = Object.keys(COUNTRY_NAME_MAP).find(k => k.toLowerCase() === name.toLowerCase());
+      if(found) return COUNTRY_NAME_MAP[found];
+      return name;
     }
 
-    // Load world map GeoJSON data
-    d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
-      .then(function(json) {
-        update(json); // draw map
-        console.log(json.features)
+    // -------------------------
+    // Basic D3 setup
+    // -------------------------
+    const svg = d3.select('#map-chart');
+    const g = svg.select('g.map');
+    const tooltip = d3.select('#tooltip');
+
+    const projection = d3.geoNaturalEarth1();
+    const path = d3.geoPath().projection(projection);
+
+    // zoom functionality
+    const zoom = d3.zoom().scaleExtent([1, 8]).on('zoom', (event) => { g.attr('transform', event.transform); });
+    svg.call(zoom).call(zoom.transform, d3.zoomIdentity);
+
+    // convenience lookups that use normalization
+    function getThumbnailByName(name){
+      const normalized = normalizeCountryName(name);
+      if(!normalized) return 'https://via.placeholder.com/640x360?text=No+image';
+      return (appData && appData[normalized] && appData[normalized].thumbnail_url) ? appData[normalized].thumbnail_url : 'https://via.placeholder.com/640x360?text=No+image';
+    }
+
+    function getYoutubeByName(name){
+      const normalized = normalizeCountryName(name);
+      if(!normalized) return null;
+      return (appData && appData[normalized] && appData[normalized].youtube_url) ? appData[normalized].youtube_url : null;
+    }
+
+    // -------------------------
+    // Tooltip & sidebar updates
+    // -------------------------
+    function showTooltip(evt, d){
+      const origName = d?.properties?.name || 'Unknown';
+      const displayName = normalizeCountryName(origName);
+      const thumb = getThumbnailByName(origName);
+      tooltip.html(`<div style="font-weight:600;color:white">${displayName}</div><div style="font-size:12px;margin-top:6px;color:rgba(255,255,255,0.8)">Click to open media</div><img src='${thumb}' alt='${displayName} thumbnail'>`)
+             .style('opacity',1).attr('aria-hidden','false');
+      moveTooltip(evt);
+      updateSidebar(displayName, thumb);
+    }
+
+    function moveTooltip(evt){
+      const e = evt.sourceEvent || evt;
+      const pageX = e.pageX || (e.clientX + window.scrollX);
+      const pageY = e.pageY || (e.clientY + window.scrollY);
+      const node = tooltip.node(); if(!node) return;
+      const rect = node.getBoundingClientRect();
+      let left = pageX + 12; let top = pageY - rect.height/2;
+      if(left + rect.width + 12 > window.scrollX + window.innerWidth) left = window.scrollX + window.innerWidth - rect.width - 12;
+      if(top < window.scrollY + 12) top = window.scrollY + 12;
+      tooltip.style('left', left + 'px').style('top', top + 'px');
+    }
+
+    function hideTooltip(){ tooltip.style('opacity',0).attr('aria-hidden','true'); }
+
+    function updateSidebar(name, thumb){
+      const elName = document.querySelector('.country-name');
+      const meta = document.querySelector('.meta');
+      const img = document.getElementById('countryThumb');
+      const openMedia = document.getElementById('openMedia');
+      const moreLink = document.getElementById('moreLink');
+
+      elName.textContent = name;
+      meta.textContent = appData[name]?.description || appData[name]?.meta || 'No further metadata available.';
+      img.src = thumb;
+
+      const youtube = getYoutubeByName(name);
+      openMedia.disabled = !youtube;
+      openMedia.style.opacity = youtube ? '1' : '0.5';
+      openMedia.onclick = () => { if(youtube) openModal(youtube); };
+      moreLink.href = appData[name]?.more_url || (youtube || '#');
+      moreLink.textContent = appData[name]?.more_label || 'More';
+    }
+
+    // -------------------------
+    // Modal for embedded media
+    // -------------------------
+    const modal = (() => {
+      const node = document.createElement('div'); node.className='modal';
+      node.innerHTML = `<div class='card'><div style='display:flex;justify-content:space-between;align-items:center'><strong style='color:white'>Media</strong><button class='close' aria-label='Close'>✕</button></div><div id='mediaInner' style='margin-top:12px'></div></div>`;
+      document.body.appendChild(node);
+      node.querySelector('.close').addEventListener('click', ()=>{ node.classList.remove('show'); node.querySelector('#mediaInner').innerHTML=''; });
+      return {node, show: (html)=>{ node.querySelector('#mediaInner').innerHTML = html; node.classList.add('show'); }};
+    })();
+
+    function openModal(youtubeUrl){
+      let id = null;
+      try{ const m = youtubeUrl.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/); if(m) id = m[1]; }
+      catch(e){}
+      const html = id ? `<iframe width='100%' height='450' src='https://www.youtube.com/embed/${id}' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>` : `<a href='${youtubeUrl}' target='_blank' rel='noopener'>Open link</a>`;
+      modal.show(html);
+    }
+
+    // -------------------------
+    // Size helpers + debug loader
+    // -------------------------
+    function width() { return Math.max(800, window.innerWidth - (window.innerWidth > 880 ? 360 : 0)); }
+    function height() { return Math.max(420, window.innerHeight - 140); }
+
+    function setSvgSize() {
+      const w = width(), h = height();
+      svg.attr('viewBox', `0 0 ${w} ${h}`).style('width', '100%').style('height', '100%');
+      projection.fitSize([w, h], {type: 'Sphere'}); // placeholder until real data
+    }
+    setSvgSize();
+
+    // debug overlay
+    const debugEl = document.createElement('div');
+    debugEl.style.position='absolute'; debugEl.style.left='12px'; debugEl.style.bottom='12px';
+    debugEl.style.padding='6px 8px'; debugEl.style.background='rgba(0,0,0,0.4)'; debugEl.style.color='white';
+    debugEl.style.borderRadius='6px'; debugEl.style.fontSize='12px';
+    debugEl.textContent = 'Loading map...';
+    document.getElementById('map-wrap').appendChild(debugEl);
+
+    // draw subtle globe so user sees something early
+    function drawEmptyBackground() {
+      g.selectAll('*').remove();
+      g.append('path').datum({type:'Sphere'}).attr('d', path).attr('fill','rgba(10,20,30,0.45)');
+    }
+    drawEmptyBackground();
+
+    // -------------------------
+    // Load GeoJSON + render
+    // -------------------------
+    const GEOURL = 'https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson';
+
+    fetch(GEOURL, {mode: 'cors'})
+      .then(resp => {
+        if(!resp.ok) throw new Error('Network response not ok: ' + resp.status);
+        return resp.json();
+      })
+      .then(world => {
+        debugEl.textContent = 'GeoJSON loaded, rendering...';
+        const w = width(), h = height();
+        svg.attr('viewBox', `0 0 ${w} ${h}`);
+        projection.fitSize([w, h], world);
+
+        g.selectAll('path').remove(); // clear placeholder
+        g.selectAll('path')
+          .data(world.features)
+          .join('path')
+          .attr('d', path)
+          .attr('tabindex', 0)
+          .on('mouseover', function(event,d){ d3.select(this).classed('highlight', true); showTooltip(event,d); })
+          .on('focus', function(event,d){ d3.select(this).classed('highlight', true); showTooltip(event,d); })
+          .on('mousemove', function(event){ moveTooltip(event); })
+          .on('mouseout', function(){ d3.select(this).classed('highlight', false); hideTooltip(); })
+          .on('blur', function(){ d3.select(this).classed('highlight', false); hideTooltip(); })
+          .on('click', function(event,d){ const origName = d.properties?.name; const yt = getYoutubeByName(origName); if(yt){ openModal(yt); } else { zoomToFeature(d); } })
+          .each(function(d){ d._centroid = path.centroid(d); });
+
+        window._world = world;
+        debugEl.style.display='none';
+      })
+      .catch(err => {
+        console.error('GeoJSON load failed:', err);
+        debugEl.textContent = 'Failed to load geojson: check console/network (CORS/404).';
+        // keep subtle globe background so at least something is visible
       });
 
-    // Make map responsive on window resize
-    window.addEventListener("resize", () => {
-      // Update new screen size
-      width = window.innerWidth;
-      height = window.innerHeight;
+    // -------------------------
+    // Zoom-to-feature helper
+    // -------------------------
+    function zoomToFeature(feature){
+      const svgNode = svg.node();
+      if(!feature) return svg.transition().duration(600).call(zoom.transform, d3.zoomIdentity);
+      const bounds = path.bounds(feature);
+      const dx = bounds[1][0] - bounds[0][0];
+      const dy = bounds[1][1] - bounds[0][1];
+      const x = (bounds[0][0] + bounds[1][0]) / 2;
+      const y = (bounds[0][1] + bounds[1][1]) / 2;
+      const scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / svgNode.clientWidth, dy / svgNode.clientHeight)));
+      const translate = [svgNode.clientWidth / 2 - scale * x, svgNode.clientHeight / 2 - scale * y];
+      const t = d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale);
+      svg.transition().duration(700).call(zoom.transform, t);
+    }
 
-      // Update projection
-      projection
-        .scale(width / 6)
-        .translate([width / 2, height / 2]);
-
-      // Redraw countries with new projection
-      g.selectAll("path").attr("d", geoGenerator);
+    // -------------------------
+    // Search & controls
+    // -------------------------
+    document.getElementById('search').addEventListener('input', function(e){
+      const q = (this.value || '').toLowerCase().trim();
+      if(!window._world) return;
+      if(!q){
+        d3.selectAll('.map path').classed('highlight', false);
+        return;
+      }
+      const match = window._world.features.find(f => (f.properties.name||'').toLowerCase() === q || (f.properties.name||'').toLowerCase().includes(q));
+      if(match){
+        d3.selectAll('.map path').classed('highlight', d => d === match);
+        zoomToFeature(match);
+        updateSidebar(normalizeCountryName(match.properties.name), getThumbnailByName(match.properties.name));
+      }
     });
-  </script> 
+
+    document.getElementById('zoom-in').addEventListener('click', ()=>{ svg.transition().call(zoom.scaleBy, 1.4); });
+    document.getElementById('zoom-out').addEventListener('click', ()=>{ svg.transition().call(zoom.scaleBy, 1/1.4); });
+    document.getElementById('fit').addEventListener('click', ()=>{ svg.transition().duration(700).call(zoom.transform, d3.zoomIdentity); });
+    document.getElementById('resetBtn').addEventListener('click', ()=>{ document.getElementById('search').value=''; document.getElementById('fit').click(); document.querySelectorAll('.map path').forEach(p=>p.classList.remove('highlight')); });
+
+    window.addEventListener('resize', ()=>{
+      if(!window._world) { setSvgSize(); return; }
+      const w = width(), h = height(); svg.attr('viewBox', `0 0 ${w} ${h}`);
+      projection.fitSize([w,h], window._world);
+      g.selectAll('path').attr('d', path);
+    });
+
+    // Optional: expose a simple debug function on window
+    window.mapDebug = {
+      check: () => {
+        console.log('d3 version:', typeof d3 !== 'undefined' ? d3.version : 'NOT LOADED');
+        console.log('svg rect:', document.querySelector('#map-chart')?.getBoundingClientRect());
+        fetch(GEOURL, {mode:'cors'}).then(r=>console.log('geo status', r.status)).catch(e=>console.error(e));
+      }
+    };
+  </script>
 </body>
 </html>
