@@ -233,6 +233,25 @@ def fetch_top_trending_video(api_key, region_code):
         return None
 
 
+def fetch():
+    trending_videos = {}
+
+    for code, country_name in COUNTRIES.items():
+        print(f"Fetching top trending video for {country_name} ({code})...")
+        data = fetch_top_trending_video(API_KEY, code)
+        if data and "items" in data and len(data["items"]) > 0:
+            video = data["items"][0]
+            video_info = {
+                "country": country_name,
+                "title": video["snippet"]["title"],
+                "youtube_url": f"https://www.youtube.com/watch?v={video['id']}",
+                "thumbnail_url": video["snippet"]["thumbnails"]["high"]["url"],
+            }
+            trending_videos[country_name]=video_info
+
+    return trending_videos
+
+
 def main():
     trending_videos = {}
 

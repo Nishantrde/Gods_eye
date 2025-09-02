@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import library
 from datetime import date
 import json
+from .yt_api_local import fetch
 
 # Create your views here.
 def index(request):
@@ -10,8 +11,7 @@ def index(request):
     if yt_data:
         yt_data = library.objects.get(id=str(date.today()))
     else:
-        with open('C:/Users/ACER/Downloads/yt_world/yt_world/top_trending_videos.json', 'r', encoding='utf-8') as file:
-            json_data = json.load(file)
+        json_data = fetch()
         
         check_exist = library.objects.filter(id=str(date.today()))
         if not check_exist:
@@ -23,8 +23,7 @@ def index(request):
 def index_test(request):
     return render(request, "data_visualizer.html")
 def re_gen(request):
-    with open('C:/Users/ACER/Desktop/gods_eye/gods_eye/top_trending_videos.json', 'r', encoding='utf-8') as file:
-        yt_data = json.load(file)
+    yt_data = fetch()
     
     check_exist = library.objects.filter(id=str(date.today()))
     if not check_exist:
