@@ -11,7 +11,7 @@ def index(request):
     if yt_data:
         yt_data = library.objects.get(id=str(date.today()))
     else:
-        json_data = fetch()
+        json_data = fetch() 
         
         check_exist = library.objects.filter(id=str(date.today()))
         if not check_exist:
