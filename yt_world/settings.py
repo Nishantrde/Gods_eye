@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'yt_world.wsgi.application'
 # }
 
 DATABASES = {
-    'default':dj_database_url.parse('postgresql://yt_world_v4m6_user:cC2tIZXeAX5mxY7XpEPZOs3AQwxlqPow@dpg-d2mt13juibrs73bqumf0-a.singapore-postgres.render.com/yt_world_v4m6')
+    'default':dj_database_url.parse('postgresql://yt_world_kd8e_user:ImGddsj7Wfy2bwGfstFvEEpLJHtxeN5l@dpg-d3da0oogjchc739rttbg-a.singapore-postgres.render.com/yt_world_kd8e')
 }
 
 

@@ -8,7 +8,7 @@ from .yt_api_local import fetch
 def index(request):
     yt_data = ""
     yt_data = library.objects.filter(id=str(date.today()))
-    if yt_data:
+    if yt_data: 
         yt_data = library.objects.get(id=str(date.today()))
     else:
         json_data = fetch() 
